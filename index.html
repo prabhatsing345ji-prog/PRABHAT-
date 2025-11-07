@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flappy Glister</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game" width="480" height="640"></canvas>
+
+<div id="overlay" class="visible">
+  <h1>Flappy Glister</h1>
+  <div class="credits">Developer: <strong>Glister</strong></div>
+  <div class="credits">Instagram: <strong>@glisterprabhat</strong></div>
+  <button id="instaBtn" class="btn">Open Instagram</button>
+  <button id="startBtn" class="btn primary">Start Game</button>
+</div>
+
+<div id="gameover" class="hidden">
+  <h2>Game Over</h2>
+  <div id="finalScore">Score: 0</div>
+  <div class="credits">Developer: <strong>Glister</strong></div>
+  <div class="credits">Instagram: <strong>@glisterprabhat</strong></div>
+  <button id="instaBtn2" class="btn">Open Instagram</button>
+  <button id="retryBtn" class="btn primary">Retry</button>
+</div>
+
+<div id="hud"><div id="score">Score: 0</div></div>
+
+<script src="game.js"></script>
+<script>
+const instaURL = "https://www.instagram.com/glisterprabhat";
+document.getElementById('instaBtn').onclick = ()=> window.open(instaURL,'_blank');
+document.getElementById('instaBtn2').onclick = ()=> window.open(instaURL,'_blank');
+</script>
+</body>
+</html>
